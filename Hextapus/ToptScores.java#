@@ -1,0 +1,126 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.awt.Color;
+//import java.lang.Object;
+
+/**
+ * Write a description of class TopScores here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class ToptScores extends World
+{
+    Label theScore;
+    int[] toptopScores = {0, 0, 0, 0, 0};
+    public static int score;
+    //Arrays.sort(topScores);
+
+    /**
+     * Constructor for objects of class ToptopScores.
+     * 
+     */
+    public ToptopScores()
+    {    
+        // Creates the world with 750x415 cells with a cell size of 1x1 pixels.
+        super(750, 415, 1); 
+        
+        prepare();
+        
+    }
+    
+    public void prepare(){
+        Label title = new Label("TOPScores", 80);
+        addObject(title, 375, 80);
+        title.setFillColor(Color.GRAY);
+        title.setLineColor(Color.GRAY);
+        
+        Label scoreLabel = new Label("SCORE : ", 25);
+        addObject(scoreLabel, 133, 334);
+        scoreLabel.setFillColor(Color.WHITE);
+        scoreLabel.setLineColor(Color.WHITE);
+        
+        theScore = new Label(score, 30);
+        addObject(theScore, 199, 334);
+        theScore.setFillColor(Color.WHITE);
+    }
+    
+    // public void addtopScores () {
+        
+        // if (score > topScores[0] && score > topScores[1] && score > topScores[2] && score > topScores[3] && score > topScores[4])
+        // {
+            // topScores[0] = score;
+        // }   
+    // }
+    
+    public void act () {
+        //topScores[0] = End.highScore;
+        bubbleSort(topScores);
+        addScores();
+        
+        Play play = new Play("Play", 70);
+        addObject(play, 480, 220);
+        play.setFillColor(Color.PINK);
+        play.setLineColor(Color.PINK);
+        
+        // Conditional for the play button by mouse click
+        if (Greenfoot.mouseClicked(play))
+        {
+            // Takes the user to the world in which gameplay occurs.
+            Greenfoot.setWorld(new Game());
+            
+        }
+    }
+    
+    public int[] bubbleSort(int [ ] topScores)
+    {
+         int i;
+         int temp;   // holding variable
+         // 4, 0, 0, 0, 0
+         // 5, 0, 0, 0, 0
+         for( i = 0;  i < toptopScores.length -1;  i++ )
+         {
+             if (score > topScores[4])   
+             {
+                 topScores[4] = score;                // add the recent game score
+                 temp = topScores[4];
+                 
+                 if (temp > topScores[i + 1])   
+                 {
+                     temp = topScores[i + 1];                // swap elements
+                     topScores[i + 1] = temp;
+                 } 
+                 
+                 // if (temp > topScores[i + 1])   
+                 // {
+                     // temp = topScores[i + 1];                // swap elements
+                     // topScores[i = 1] = scores[i+1];
+                     // scores[i+1] = temp;
+                 // }
+             } 
+         }
+      
+        return scores;
+    } 
+    
+    public void addScores() {
+        Label top = new Label(scores[0], 30);
+        addObject(top, 133, 100);
+        top.setFillColor(Color.BLACK);
+        
+        Label second = new Label(scores[1], 30);
+        addObject(second, 133, 140);
+        second.setFillColor(Color.GRAY);
+        
+        Label third = new Label(scores[2], 30);
+        addObject(third, 133, 180);
+        third.setFillColor(Color.PINK);
+        
+        Label fourth = new Label(scores[3], 30);
+        addObject(fourth, 133, 220);
+        fourth.setFillColor(Color.BLUE);
+        
+        Label fifth = new Label(scores[4], 30);
+        addObject(fifth, 133, 260);
+        fifth.setFillColor(Color.WHITE);
+    }
+}

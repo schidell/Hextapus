@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Octopus()
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ Octopus.\n\ \n
+comment1.params=amount
+comment1.target=void\ increaseScore(int)
+comment1.text=\n\ Increases\ the\ score\ value\ by\ a\ specified\ increment\n\n\ @param\ amount\ is\ the\ increment\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\n\ Act\ -\ do\ whatever\ the\ Octopus\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+numComments=3

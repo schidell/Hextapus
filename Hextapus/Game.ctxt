@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Game()
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ Game.\n\ \n
+comment1.params=
+comment1.target=void\ prepare()
+comment1.text=\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\n\ That\ is\:\ create\ the\ initial\ objects\ and\ add\ them\ to\ the\ world.\n
+comment2.params=
+comment2.target=void\ updateScoreLabel()
+comment2.text=\n\ Updates\ the\ visible\ score\n\n
+comment3.params=
+comment3.target=void\ gameOver()
+comment3.text=\n\ Execute\ all\ events\ when\ octopus\ dies.\n\ Specifically\:\ add\ necessary\ objects\ and\ effects,\ and\ move\ to\ the\ end\ page.\n\n
+comment4.params=
+comment4.target=void\ octopusBlink()
+comment4.text=\n\ Adds\ a\ blinking\ animation\ to\ the\ octopus\ hero\ to\ indicate\ death.\n\ Also\ adds\ a\ moving\ label\ above\ the\ octopus.\n\n
+comment5.params=
+comment5.target=void\ act()
+comment5.text=\n\ This\ method\ is\ called\ whenever\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+numComments=6
